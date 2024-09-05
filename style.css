@@ -1,22 +1,10 @@
 * {
   padding: 0;
   margin: 0;
-  background-image: url("img/img1.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% auto;
 }
 
-main {
-  width: 100%;
-  position: relative;
-  background-color: rgb(241, 236, 227);
-  text-align: center;
-}
-
-h1 {
-  font-size: clamp(1rem, 2vw, 4rem);
+html {
+  scroll-behavior: smooth;
 }
 
 header {
@@ -27,24 +15,32 @@ header {
     "nom1";
   align-items: center;
   padding: 10px;
-  background-color: rgb(241, 236, 227);
+  position: relative;
+  height: 100vh;
 }
 
-.box-text {
-  display: flex;
+#fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
 }
-.text {
-  margin: auto;
-  text-align: center;
+
+h1 {
+  font-size: clamp(1rem, 2vw, 4rem);
 }
 
 #nombre {
   grid-area: nom;
   color: white;
   text-align: center;
-  padding-top: 20%;
+  padding-bottom: 20%;
   text-shadow: 2px 2px 4px #000000;
 }
+
 #nombre1 {
   grid-area: nom1;
   color: white;
@@ -52,18 +48,83 @@ header {
   text-shadow: 2px 2px 4px #000000;
 }
 
-h {
+a {
   padding-left: 50px;
   padding-right: 50px;
-  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom-color 0.4s ease-in-out;
 }
 
-h:hover {
-  text-decoration: underline;
+a:hover {
+  color: white;
+  border-bottom-color: #ebebeb;
 }
 
 #lista1 {
+  position: fixed;
+  top: 0;
+  left: 27.5%;
   text-align: center;
   grid-area: list;
   color: white;
+  z-index: 1000;
+}
+
+main {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  position: relative;
+  background-color: #808080;
+}
+
+.image-wrapper img {
+  width: 80px;
+  height: auto;
+  display: inline-block;
+  margin-right: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.image-wrapper:hover img {
+  transform: scale(1.1);
+}
+
+#informacion {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  background-color: #808080;
+}
+
+.box-text {
+  padding: 40px;
+  text-align: center;
+}
+
+.box-text p {
+  color: white;
+  font-size: 20px;
+  margin: 0;
+}
+.box-text h1 {
+  text-shadow: 2px 2px 4px #000000;
+  color: white;
+  font-size: 40px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+#foto {
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.423);
+  transition: transform 0.3s ease;
+}
+
+#foto:hover {
+  transform: scale(1.1);
 }
