@@ -8,7 +8,8 @@
   </head>
   <body>
     <header id="Inicio">
-      <nav id="lista1">
+      <button class="menu-btn" id="menu-toggle">&#9776;</button>
+      <nav id="lista1" class="menu">
         <a href="#Inicio">Inicio</a>
         <a href="#informacion">Información</a>
         <a href="#estudioss">Estudios</a>
@@ -79,17 +80,17 @@
       <section id="fotosyo">
         <h1>Imagenes Relacionadas Conmigo</h1>
         <div id="jader">
-          <img src="yo/IMG-20240905-WA0039.jpg" alt="" width="20%" />
-          <img src="yo/IMG-20240905-WA0037.jpg" alt="" width="20%" />
-          <img src="yo/IMG-20240905-WA0019.jpg" alt="" width="20%" />
-          <a href="fotos/fotos.html">Ver mas...</a>
+          <img id="uno" src="yo/IMG-20240905-WA0039.jpg" alt="" width="20%" />
+          <img id="dos" src="yo/IMG-20240905-WA0037.jpg" alt="" width="20%" />
+          <img id="tres" src="yo/IMG-20240905-WA0019.jpg" alt="" width="20%" />
+          <a id="ver-mas" href="fotos/fotos.html">Ver mas...</a>
         </div>
       </section>
 
       <section id="estudioss">
         <h2>Estudios</h2>
         <div class="estudios">
-          <div class="estudio">
+          <div class="estudio" id="e1">
             <h3>Básica/Media</h3>
             <p>
               Mis estudios en primaria y bachillerato fueron diversos y
@@ -100,7 +101,7 @@
               desempeño constante y sin dejarme atrás por las circunstancias.
             </p>
           </div>
-          <div class="estudio">
+          <div class="estudio" id="e2">
             <h3>Técnico</h3>
             <p>
               En 2020, decidí continuar mi formación en el SENA, donde me
@@ -110,7 +111,7 @@
               graduarme, obteniendo valiosas habilidades técnicas en el proceso.
             </p>
           </div>
-          <div class="estudio">
+          <div class="estudio" id="e3">
             <h3>Superior</h3>
             <p>
               Actualmente, me encuentro en el quinto semestre de mi carrera
@@ -144,5 +145,14 @@
         </p>
       </div>
     </footer>
+
+    <script>
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          var menu = document.getElementById("lista1");
+          menu.classList.toggle("active");
+        });
+    </script>
   </body>
 </html>

@@ -75,6 +75,9 @@ a:hover {
   text-shadow: 2px 2px 4px #000000;
   background-color: #000000a2;
 }
+.menu-btn {
+  display: none; /* Oculta el botón de hamburguesa en pantallas grandes */
+}
 
 main {
   width: 100%;
@@ -280,4 +283,179 @@ main {
 
 .footer span {
   color: #e63946;
+}
+
+@media (max-width: 480px) {
+  #lista1.active {
+    display: flex;
+    position: fixed;
+  }
+  #lista1 {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    z-index: 999;
+  }
+  .menu-btn {
+    display: block;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    font-size: 30px;
+    color: white;
+    background: none;
+    border: none;
+    z-index: 1000;
+    cursor: pointer;
+  }
+
+  header {
+    grid-template-areas:
+      "list"
+      "nom"
+      "nom1";
+    height: 70vh;
+  }
+
+  #nombre {
+    font-size: 2rem;
+  }
+
+  #nombre1 {
+    font-size: 1.5rem;
+  }
+
+  .image-wrapper img {
+    width: 30px;
+    margin-right: 30px;
+  }
+
+  .text-wrapper img {
+    display: none;
+  }
+
+  #fotosyo {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  #jader img {
+    width: 50%;
+    margin: 0 auto;
+  }
+  #jader #uno,
+  #dos {
+    display: none;
+  }
+  .estudios {
+    display: grid;
+    grid-template-areas:
+      "e1"
+      "e2"
+      "e3";
+    align-items: center;
+    justify-items: center;
+    max-width: 210px;
+    margin: 0 auto;
+  }
+  .estudios p {
+    display: none;
+  }
+
+  #e1 {
+    grid-area: e1;
+  }
+  #e2 {
+    grid-area: e2;
+  }
+  #e3 {
+    grid-area: e3;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #lista1 {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    z-index: 999;
+  }
+
+  .menu-btn {
+    display: block;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    font-size: 30px;
+    color: white;
+    background: none;
+    border: none;
+    z-index: 1000;
+    cursor: pointer;
+  }
+
+  #lista1.active {
+    display: flex;
+    position: fixed;
+  }
+  header {
+    grid-template-areas:
+      "list"
+      "nom"
+      "nom1";
+    height: 60vh;
+  }
+
+  #nombre {
+    font-size: 1.5rem;
+  }
+
+  #nombre1 {
+    font-size: 1.2rem;
+  }
+  .image-wrapper img {
+    width: 80px;
+    margin-right: 30px;
+  }
+
+  #foto {
+    position: relative;
+    top: 26%;
+    left: 10px;
+    width: 80%;
+  }
+
+  #fotosyo {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 90%;
+  }
+
+  #jader {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  #jader img {
+    width: 30%;
+  }
+
+  #ver-mas {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+  }
 }
