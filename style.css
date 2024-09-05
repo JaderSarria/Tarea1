@@ -73,6 +73,7 @@ a:hover {
   color: white;
   z-index: 1000;
   text-shadow: 2px 2px 4px #000000;
+  background-color: #000000a2;
 }
 
 main {
@@ -159,6 +160,49 @@ main {
 #foto:hover {
   transform: scale(1.1);
 }
+
+#fotosyo {
+  width: 40%;
+  margin: 0 auto;
+  padding: 20px;
+  padding-left: 300px;
+  padding-right: 300px;
+  background-color: #a0a0a08a;
+  border-radius: 8px;
+  text-align: center;
+  overflow: auto;
+}
+
+#fotosyo h1 {
+  margin-bottom: 20px;
+}
+
+#jader {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+#jader img {
+  width: 30%;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#fotosyo a {
+  display: block;
+  margin: 20px auto;
+  margin-top: 20px;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#fotosyo a:hover {
+  text-decoration: underline;
+}
+
 #estudioss {
   display: flex;
   flex-direction: column;
