@@ -60,16 +60,19 @@ a {
 a:hover {
   color: white;
   border-bottom-color: #ebebeb;
+  box-shadow: 2px #000000;
 }
 
 #lista1 {
   position: fixed;
+  padding-top: 10px;
   top: 0;
   left: 27.5%;
   text-align: center;
   grid-area: list;
   color: white;
   z-index: 1000;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 main {
@@ -88,6 +91,7 @@ main {
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
+  object-fit: cover;
 }
 
 .image-wrapper:hover img {
@@ -128,3 +132,48 @@ main {
 #foto:hover {
   transform: scale(1.1);
 }
+#estudioss {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #808080;
+}
+
+#estudioss h2 {
+  position: relative;
+  bottom: 20px;
+  text-shadow: 2px 2px 4px #000000;
+  color: white;
+  font-size: 40px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+#estudioss h3 {
+  position: relative;
+  color: rgb(0, 0, 0);
+  font-size: 27px;
+  line-height: 3;
+}
+
+.estudios {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  width: 100%; /* Asegura que ocupe el ancho completo disponible */
+  max-width: 1200px; /* Limita el ancho máximo para una mejor visualización */
+}
+
+.estudio {
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  flex: 1;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
